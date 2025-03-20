@@ -2,7 +2,9 @@
     --dark-green : #596D48;
     --light-gray: #E5E7EB;
     --pure-blue: #0000FF;
-    --light-red : #FF7F7F;
+    --pure-white: #ffffff;
+    --light-red : #ff0000;
+    
 }
 
 *,
@@ -54,12 +56,12 @@ body{
 .right-side{
     width: 70%;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--light-gray);
 }
 
 .right-container{
     display: flex;
     flex-direction: column;
-    padding: 80px 50px 30px 50px;
 }
 
 .paragraphs{
@@ -67,10 +69,65 @@ body{
     flex-direction: column;
     width: 60%;
     gap: 15px;
+    padding: 80px 50px 30px 50px;
 }
 
-.paragraphs p{
+.paragraphs p, .input-box p:first-child{
     font-weight: bold;
     font-size: 18px;
 }
 
+.input-box{
+    background-color: var(--pure-white);
+    padding: 30px 50px 30px 50px;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.3);
+    font-size: 11px;
+}
+
+.name, .email-phone, .pass{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.first-name, .last-name, .email, .phone, .password, .confirm-password{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+button{
+    background-color: var(--dark-green);
+    color: var(--pure-white);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 25px;
+    margin: 30px 50px 30px 50px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.forms p:last-child{
+    margin: 0px 50px 30px 50px;
+    font-size: 15px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--dark-green);
+    font-weight: bold;
+}
+
+input:focus{
+    outline: none !important;
+    border: 2px solid var(--pure-blue);
+    box-shadow: 0 0 10px #719ECE;
+  
+}
+
+input:invalid{
+    outline: none !important;
+    border: 2px solid var(--light-red);
+    box-shadow: 0 0 10px #719ECE;
+}
