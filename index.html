@@ -19,7 +19,7 @@
                 <p>You know you want to.</p>
             </div>
             <div class="forms">
-                <form action="" method="">
+                <form action="/signup" method="POST">
                     <div class="input-box">
                         <p>Let's do this!</p>
                         <div class="name">
@@ -35,7 +35,7 @@
                         <div class="email-phone">
                             <div class="email">
                                 <label for="email">EMAIL</label>
-                                <input type="email" name="email" id="email">
+                                <input type="email" name="email" id="email" required>
                             </div>
                             <div class="phone">
                                 <label for="phone-number">PHONE NUMBER</label>
@@ -45,15 +45,15 @@
                         <div class="pass">
                             <div class="password">
                                 <label for="password">PASSWORD</label>
-                                <input type="password" name="password" id="password" minlength="10">
+                                <input type="password" name="password" id="password" minlength="10" required>
                             </div>
                             <div class="confirm-password">
                                 <label for="confirm-password">CONFIRM PASSWORD</label>
-                                <input type="password" name="confirm-password" id="confirm-password" minlength="10">
+                                <input type="password" name="confirm-password" id="confirm-password" minlength="10" required>
                             </div>
                         </div>
                     </div>
-                    <button type="submit">Create Account</button>
+                    <button class="submit" id="submit" type="submit">Create Account</button>
                     <p>Already have an account? <a href="">Log in</a></p>
                 </form>
                 
